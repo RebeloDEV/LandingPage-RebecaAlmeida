@@ -527,7 +527,11 @@ main {
     /* FOOTER */
 
     .txt-footer{
-        font-size: 20px;
+        font-size: 50px;
+    }
+
+    footer .contatos p{
+        font-size: 15px;
     }
     
 }

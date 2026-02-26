@@ -526,11 +526,7 @@ main {
 
     /* FOOTER */
 
-    .txt-footer h2{
-        font-size: 20px;
-    }
-
-    .txt-footer p{
+    .txt-footer{
         font-size: 10px;
     }
     

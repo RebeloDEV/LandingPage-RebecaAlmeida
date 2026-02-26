@@ -53,8 +53,8 @@ h2::after{
 /* ESTILIZAÇÃO HEADER */
 
 header{
-    min-height: 50vh;
-    background-image: url("images/paisagem.jpg");
+    min-height: 20vh;
+    background-image: url(/images/paisagem.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -76,8 +76,12 @@ header .interface .flex{
 header .interface .flex .img-rbc{
     flex-direction: row;
     display: flex;
-    align-items: flex-end;
+    align-self: flex-end;
     justify-content: center;
+}
+
+.img-rbc img{
+    width: 250px;
 }
 
 .text-e-botao{
@@ -85,7 +89,8 @@ header .interface .flex .img-rbc{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    gap: 25px;
+    padding: 30px 0;
 }
 
 header .txt-header{
@@ -99,7 +104,7 @@ header .txt-header{
 .txt-header h1{
     font-size: 50px;
     line-height: 1.0;
-    margin: 40px 0;
+    margin: 10px 0 20px 0;
 }
 
 .btn-contato button{
@@ -239,21 +244,26 @@ section .interface .flex{
 .caixa{
     display: flex;
     flex-direction: row;
-    background-color: #a3b17d;
     color: #f4f6c8;
+    height: 500px;
+}
+
+.caixa .img-sobre img{ 
+    height: 100%;
 }
 
 .txt-sobre{
     padding: 40px 55px;
+    background-color: #a3b17d;
 }
 
 .txt-sobre h1{
-    font-size: 60px;
+    font-size: 40px;
 }
 
 .txt-sobre .sobre{
     margin: 10px 0;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .linkedin-sobre{
@@ -322,7 +332,7 @@ footer i{
     padding: 5px 0;
 }
 
-/* CSS POSITION */
+/* FOLHAS */
 
 main {
   position: relative;
@@ -336,31 +346,187 @@ main {
 }
 
 .folha2e-1 {
-  left: -46px;
+  left: -10px;
   top: 360px;
-  width: 300px;
+  width: 15%;
 }
 
 .folha1e-2 {
-  left: -42px;
+  left: -10px;
   top: 1100px;
-  width: 260px;
+  width: 15%;
 }
 
 .folha1d-1{
-    right: -42px;
+    right: -10px;
     top: 85px;
-    width: 270px;
+    width: 15%;
 }
 
 .folha2d-2{
-    right: -50px;
+    right: -10px;
     top: 590px;
-    width: 320px;
+    width: 15%;
 }
 
 .folha1d-3{
-    right: -50px;
+    right: -10px;
     top: 1320px;
-    width: 280px;
+    width: 15%;
+}
+
+/* RESPONSIVIDADE */
+
+@media screen and (min-width: 1021px) and (max-width: 1440px) {
+    /* Estilos para telas médias/grandes */
+
+    .interface .flex .servicos{
+        width: 95%;
+        justify-content: center;
+    }
+
+    .interface .flex .informacoes{
+        width: 95%;
+        justify-content: center;
+    }
+
+    .sobre-mim .interface{
+        width: 75%;
+    }
+
+}
+
+@media screen and (max-width: 1020px){
+
+    /* GERAIS */
+
+    h2{
+        font-size: 25px;
+    }
+
+    /* HEADER */
+    header{
+        height: 20vh;
+        background-image: url("images/paisagem.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    header .interface{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    header .interface .flex{
+        flex-direction: row;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .text-e-botao{
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    header .txt-header{
+        color: #fffee2;
+        text-decoration: none;
+        text-align: center;
+        justify-content: center;
+        width: 90%;
+    }
+
+    .txt-header h1{
+        font-size: 16px;
+        line-height: 1.0;
+        margin: 15px 0 8px 0;
+    }
+
+    .txt-header p{
+        font-size: 10px;
+    }
+
+    .btn-contato button{
+        padding: 7px 20px;
+        font-size: 10px;
+        font-weight: 40;
+        background-color: #485d25;
+        color: #f4f6c8;
+        border: 0;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover, form .btn-enviar input:hover{
+        transform: scale(1.05);
+    }
+
+    .img-rbc{
+        align-self: flex-end;
+        margin: 0 0 0 10px;
+    }
+    
+    .img-rbc img{
+        width: 120px;
+    }
+
+    /* HOME -> MEUS SERVIÇOS */
+
+    .interface .flex .servicos{
+        flex-direction: column;
+    }
+
+    .servicos-box{
+        padding: 10px 30px;
+        margin: 20px 0;
+    }
+
+    /* HOME -> INFO */
+
+    .interface .flex .informacoes{
+        flex-direction: column;
+        
+    }
+
+    .info-box{
+        padding: 0 30px;
+        margin: 20px 0;
+    }
+
+    .info .interface .flex{
+        justify-content: center;
+    }
+
+    /* SOBRE MIM*/
+
+    .sobre-mim .interface{
+        margin-bottom: 150px;
+    }
+
+    .caixa{
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+        height: 100%;
+    }
+
+    .img-sobre img{
+        width: 350px;
+        height: 100%;
+    }
+
+    /* FOOTER */
+
+    .txt-footer{
+        font-size: 20px;
+    }
+
 }

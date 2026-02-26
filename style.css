@@ -526,13 +526,12 @@ main {
 
     /* FOOTER */
 
-    .txt-footer{
+    .txt-footer h2{
         font-size: 20px;
     }
 
-    footer .contatos p{
-    color: #f4f6c8;
-    font-size: 15px;
+    .txt-footer p{
+        font-size: 10px;
     }
-
+    
 }
